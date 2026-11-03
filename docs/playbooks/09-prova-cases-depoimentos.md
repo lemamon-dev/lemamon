@@ -190,7 +190,7 @@ Um diagrama da arquitetura de um projeto entregue é prova técnica para o avali
    | traço de linhas e setas, 1,5 px | `#9aa4bb` | `--color-border-strong` |
    | fundo dos nós | `#ffffff` | `--color-bg-surface` |
    | borda dos nós | `#cbd2e0` | `--color-border-default` |
-   | fluxo em destaque (o caminho principal) | `#f59e0b` | `--color-accent` |
+   | fluxo em destaque (o caminho principal) | `#ff5252` | `--color-accent` |
    | texto | `#111845` | `--color-text-primary` |
 
    Nenhum gradiente, sombra ou outra cor. O diagrama tem fundo próprio `#ffffff`: no tema escuro do site ele aparece como um cartão claro, e isso é esperado.
@@ -240,7 +240,7 @@ Critério de aceite: pelo menos 2 provas concretas na Home, sem nome, logo ou n�
 - [ ] Texto e números aprovados por escrito pelo cliente.
 - [ ] Case nos 3 idiomas, mesmo nome de arquivo, `publicado: true` nos 3; em en e es, `slugUrl` com o slug traduzido (único no idioma).
 - [ ] `grep -rn "PREENCHER" src/content` vazio.
-- [ ] Diagramas (§9): `grep -c "<text" arquivo.svg` dá `0`, e `grep -oiE '(fill|stroke)="#[0-9a-f]{3,6}"' arquivo.svg | sort -u` só mostra `#9aa4bb`, `#ffffff`, `#cbd2e0`, `#f59e0b` e `#111845` (ou `none`).
+- [ ] Diagramas (§9): `grep -c "<text" arquivo.svg` dá `0`, e `grep -oiE '(fill|stroke)="#[0-9a-f]{3,6}"' arquivo.svg | sort -u` só mostra `#9aa4bb`, `#ffffff`, `#cbd2e0`, `#ff5252` e `#111845` (ou `none`).
 - [ ] `COREPACK_ENABLE_DOWNLOAD_PROMPT=0 yarn build` e `yarn test` passam.
 - [ ] No deploy preview: o case aparece em `/cases/<slug>`, `/en/cases/<slugUrl en>` e `/es/casos/<slugUrl es>`, e o seletor de idioma leva de um ao outro; `/cases` só aparece com 2 ou mais.
 - [ ] Pedir indexação da página nova no Search Console (playbook 08 §1).

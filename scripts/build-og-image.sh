@@ -61,8 +61,8 @@ const C = {
   text: "#ffffff",
   muted: "#cbd2e0", // neutral-300
   faint: "#9aa4bb", // neutral-400
-  amber: "#fbbf24", // amber-400
-  amberSoft: "#fcd34d", // amber-300
+  amber: "#ff8a8a", // red-300 (acento escuro, D51 split)
+  amberSoft: "#ffc9c9", // red-200 (D51 split)
 };
 
 const FONT_BOLD = "src/assets/fonts/source/Motiva-Sans-Bold.ttf";
@@ -101,7 +101,7 @@ function wrap(text, size, maxWidth, weight = 700) {
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const FAMILY = `'Motiva Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif`;
 
-/* {L} mark: braces + L, the brand mark carried over from the old logo (red L → amber). */
+/* {L} mark: braces + L, the brand mark carried over from the old logo (red L → vermelho de novo, D51). */
 function mark(x, y, size, { radius = 14, fullBleed = false, scale = 1 } = {}) {
   const s = size / 64;
   const inner = `

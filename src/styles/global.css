@@ -192,7 +192,7 @@ pre {
  */
 
 ::selection {
-  background-color: var(--amber-200);
+  background-color: var(--red-200);
   color: var(--ink-950);
 }
 

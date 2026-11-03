@@ -30,7 +30,7 @@ mkdirSync(OUT_VIDEO, { recursive: true });
 const INK_800 = "#18216d";
 const INK_600 = "#2f3f9e";
 const INK_50 = "#eef1fb";
-const AMBER_500 = "#f59e0b";
+const RED_500 = "#ff5252";
 const NEUTRAL_100 = "#f1f3f6";
 const NEUTRAL_300 = "#cfd5de";
 const WHITE = "#ffffff";
@@ -41,7 +41,7 @@ function avatar(initials, background) {
   <rect width="400" height="500" fill="${background}"/>
   <circle cx="200" cy="210" r="120" fill="${WHITE}" fill-opacity="0.14"/>
   <text x="200" y="250" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="120" font-weight="700" fill="${WHITE}">${initials}</text>
-  <rect x="0" y="420" width="400" height="80" fill="${AMBER_500}"/>
+  <rect x="0" y="420" width="400" height="80" fill="${RED_500}"/>
   <text x="200" y="472" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="6" fill="${INK_800}">EXEMPLO</text>
 </svg>
 `;
@@ -151,14 +151,14 @@ function screen(variant) {
   const canvas = new Canvas(1200, 675, NEUTRAL_100);
   canvas.rect(0, 0, 1200, 72, INK_800);
   canvas.rect(32, 24, 140, 24, INK_600);
-  canvas.rect(1040, 22, 128, 28, AMBER_500);
+  canvas.rect(1040, 22, 128, 28, RED_500);
   canvas.rect(0, 72, 240, 603, WHITE);
   for (let i = 0; i < 6; i++) canvas.rect(32, 112 + i * 56, 176, 20, i === 1 ? INK_600 : NEUTRAL_300);
   if (variant === "tabela") {
     for (let i = 0; i < 3; i++) {
       canvas.rect(280 + i * 300, 112, 276, 120, WHITE);
       canvas.rect(304 + i * 300, 136, 120, 20, NEUTRAL_300);
-      canvas.rect(304 + i * 300, 172, 180, 36, i === 0 ? AMBER_500 : INK_600);
+      canvas.rect(304 + i * 300, 172, 180, 36, i === 0 ? RED_500 : INK_600);
     }
     canvas.rect(280, 264, 876, 300, WHITE);
     for (let i = 0; i < 6; i++) canvas.rect(304, 292 + i * 44, 828, 24, i % 2 ? INK_50 : NEUTRAL_100);
@@ -167,29 +167,29 @@ function screen(variant) {
     canvas.rect(280, 112, 600, 452, INK_50);
     for (let i = 0; i < 4; i++) canvas.rect(280, 150 + i * 110, 600, 14, WHITE);
     for (let i = 0; i < 5; i++) canvas.rect(320 + i * 130, 112, 14, 452, WHITE);
-    for (const [x, y] of [[360, 190], [500, 300], [640, 410], [760, 230]]) canvas.rect(x, y, 28, 28, AMBER_500);
+    for (const [x, y] of [[360, 190], [500, 300], [640, 410], [760, 230]]) canvas.rect(x, y, 28, 28, RED_500);
     canvas.rect(912, 112, 256, 452, WHITE);
     for (let i = 0; i < 5; i++) {
-      canvas.rect(936, 140 + i * 84, 40, 40, i === 0 ? AMBER_500 : INK_600);
+      canvas.rect(936, 140 + i * 84, 40, 40, i === 0 ? RED_500 : INK_600);
       canvas.rect(992, 148 + i * 84, 152, 24, NEUTRAL_300);
     }
   } else if (variant === "lista") {
     // Lista do dia: linhas com marcador, texto e situação.
     for (let i = 0; i < 7; i++) {
       canvas.rect(280, 112 + i * 66, 888, 54, i === 0 ? INK_50 : WHITE);
-      canvas.rect(300, 124 + i * 66, 30, 30, i % 3 === 0 ? AMBER_500 : INK_600);
+      canvas.rect(300, 124 + i * 66, 30, 30, i % 3 === 0 ? RED_500 : INK_600);
       canvas.rect(350, 128 + i * 66, 300 + (i % 3) * 80, 22, NEUTRAL_300);
       canvas.rect(1040, 126 + i * 66, 108, 26, i % 2 ? INK_600 : NEUTRAL_300);
     }
   } else {
     for (let i = 0; i < 3; i++) {
       canvas.rect(300 + i * 290, 112, 250, 452, WHITE);
-      canvas.rect(324 + i * 290, 136, 202, 240, i === 2 ? AMBER_500 : INK_50);
+      canvas.rect(324 + i * 290, 136, 202, 240, i === 2 ? RED_500 : INK_50);
       canvas.rect(324 + i * 290, 400, 160, 20, NEUTRAL_300);
       canvas.rect(324 + i * 290, 436, 202, 40, INK_600);
     }
   }
-  canvas.rect(0, 590, 1200, 85, AMBER_500);
+  canvas.rect(0, 590, 1200, 85, RED_500);
   canvas.text("EXEMPLO", 432, 604, 8, INK_800);
   return canvas.png();
 }
@@ -202,7 +202,7 @@ function screen(variant) {
 function texture(canvas, area, seed) {
   let state = seed >>> 0;
   const next = () => ((state = (Math.imul(state, 1664525) + 1013904223) >>> 0) / 2 ** 32);
-  const colors = [INK_800, INK_50, NEUTRAL_300, AMBER_500];
+  const colors = [INK_800, INK_50, NEUTRAL_300, RED_500];
   for (let i = 0; i < 900; i++) {
     const x = area.x + Math.floor(next() * (area.w - 6));
     const y = area.y + Math.floor(next() * (area.h - 6));
@@ -225,7 +225,7 @@ function postCover(theme) {
     // Dois sistemas ligados por uma ponte.
     canvas.rect(640, 120, 200, 300, INK_50);
     canvas.rect(960, 120, 200, 300, INK_50);
-    canvas.rect(840, 250, 120, 40, AMBER_500);
+    canvas.rect(840, 250, 120, 40, RED_500);
     for (let i = 0; i < 4; i++) {
       canvas.rect(664, 148 + i * 64, 152, 28, NEUTRAL_300);
       canvas.rect(984, 148 + i * 64, 152, 28, NEUTRAL_300);
@@ -236,12 +236,12 @@ function postCover(theme) {
     for (let r = 0; r < 6; r++) {
       for (let c = 0; c < 4; c++) canvas.rect(636 + c * 126, 112 + r * 56, 118, 48, (r + c) % 2 ? NEUTRAL_100 : INK_50);
     }
-    canvas.rect(636, 112, 496, 48, AMBER_500);
+    canvas.rect(636, 112, 496, 48, RED_500);
   } else {
     // Primeira versão: degraus crescentes.
-    for (let i = 0; i < 4; i++) canvas.rect(640 + i * 130, 400 - i * 90, 110, 60 + i * 90, i === 3 ? AMBER_500 : INK_50);
+    for (let i = 0; i < 4; i++) canvas.rect(640 + i * 130, 400 - i * 90, 110, 60 + i * 90, i === 3 ? RED_500 : INK_50);
   }
-  canvas.rect(0, 530, 1200, 100, AMBER_500);
+  canvas.rect(0, 530, 1200, 100, RED_500);
   canvas.text("EXEMPLO", 432, 552, 8, INK_800);
   return canvas.png();
 }
@@ -252,7 +252,7 @@ function videoPoster() {
   texture(canvas, { x: 0, y: 0, w: 640, h: 300 }, 53);
   canvas.rect(260, 70, 120, 120, INK_50);
   canvas.rect(200, 200, 240, 110, INK_50);
-  canvas.rect(0, 300, 640, 60, AMBER_500);
+  canvas.rect(0, 300, 640, 60, RED_500);
   canvas.text("EXEMPLO", 194, 312, 6, INK_800);
   return canvas.png();
 }

@@ -10,7 +10,7 @@
  *   uma por pessoa do time que atua em projetos) e Service (serviços, Sprint de
  *   Descoberta). FAQPage é do componente Faq; BreadcrumbList, do Breadcrumb;
  *   Article, da view do post (publisher e isPartOf por @id).
- *   Nenhum dado inventado: sem nota, sem telefone, sem founder; areaServed e
+ *   Nenhum dado inventado: sem nota, sem telefone, sem founder; knowsAbout são os 5 serviços; areaServed e
  *   idiomas só com as flags da D31 (confirmacoes.outrasCidades/atendeExterior,
  *   auditoria SEO S02-3); razão social, CNPJ e ano de fundação só com
  *   empresa.ts preenchido; Person só com hasTeam (pessoa real em dados/dono.json).
@@ -153,6 +153,9 @@ export function organizationNode(locale: Locale, flags: SeoFlags, people: readon
       addressRegion: ADDRESS.region,
       addressCountry: ADDRESS.country,
     },
+    // knowsAbout (auditoria SEO (f)): os temas que a empresa domina são os 5
+    // serviços, no idioma da página. Fato já publicado, independe de flag.
+    knowsAbout: SERVICE_KEYS.map((key) => t(locale, `services.${key}.name`)),
   };
   // D31 (auditoria SEO S02-3, S05-4): com o exterior, o mundo todo, nos 3
   // idiomas do site; só com outras cidades, o Brasil. Sem flag, nada (o

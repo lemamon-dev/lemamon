@@ -74,6 +74,7 @@ describe("JSON-LD por rota (BLUEPRINT §10.3)", () => {
     expect(org).not.toHaveProperty("legalName");
     expect(org).not.toHaveProperty("taxID");
     expect(org.address).toMatchObject({ addressLocality: "São Paulo", addressRegion: "SP", addressCountry: "BR" });
+    expect(org.knowsAbout).toEqual(["Sistemas web", "Aplicativos", "Integrações e automação", "MVP e produtos digitais", "Sustentação e evolução"]);
   });
 
   it("sameAs só leva os perfis com publicar: true (S02-1)", () => {

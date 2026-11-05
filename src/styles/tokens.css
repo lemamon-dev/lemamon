@@ -432,7 +432,7 @@
   --shadow-md: 0 4px 12px -2px rgb(var(--ink-shadow-rgb) / 0.1), 0 2px 4px -2px rgb(var(--ink-shadow-rgb) / 0.06);
   --shadow-lg: 0 12px 24px -6px rgb(var(--ink-shadow-rgb) / 0.12), 0 4px 8px -4px rgb(var(--ink-shadow-rgb) / 0.06);
   --shadow-xl: 0 24px 48px -12px rgb(var(--ink-shadow-rgb) / 0.18), 0 8px 16px -8px rgb(var(--ink-shadow-rgb) / 0.08);
-  --shadow-glow-accent: 0 8px 24px -8px rgb(245 158 11 / 0.5);
+  --shadow-glow-accent: 0 8px 24px -8px rgb(255 82 82 / 0.5);
 
   /* Anéis (03-ui §3.3.2 ring.*): só a GEOMETRIA; a cor vem no uso, para
      acompanhar a superfície (data-surface="inverse"):

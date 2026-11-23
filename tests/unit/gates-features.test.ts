@@ -237,7 +237,7 @@ describe("coleções: limiares exatos, parcial não conta", () => {
   it("casesByService e cases relacionados: por tag, só com as páginas de case no ar", () => {
     const [a, b] = FIXTURE_CASE_SLUGS;
     const features = flags(withContent({ cases: [...caseVersions(a, ["mvp", "web_systems"]), ...caseVersions(b, ["mvp"])] }));
-    expect(features.casesByService).toEqual({ web_systems: 1, mobile_apps: 0, integrations: 0, mvp: 2, support: 0 });
+    expect(features.casesByService).toEqual({ web_systems: 1, mobile_apps: 0, integrations: 0, mvp: 2, support: 0, modernizacao: 0 });
     expect(hasRelatedCases(features, "mvp")).toBe(true);
     expect(hasRelatedCases(features, "support")).toBe(false);
     const single = flags(withContent({ cases: caseVersions(a, ["mvp"]) }));

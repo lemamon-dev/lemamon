@@ -55,13 +55,18 @@ interface Props {
 const { locale, service } = Astro.props;
 const features = await getFeatures();
 const isSupport = service === "support";
+const isModernization = service === "modernizacao";
 const title = isSupport
   ? t(locale, "services.support.how_it_works_title")
   : t(locale, "services.template.how_it_works_title", {
       servico_frase: tDynamic(locale, `services.${service}.name_in_sentence`),
     });
 const steps: Record<StageId, string> = getSection(locale, `services.${service}.method_steps` as const);
-const term = service === "integrations" || service === "support" ? "prioritized_scope" : null;
+const term = isModernization
+  ? "acceptance_criteria"
+  : service === "integrations" || service === "support"
+    ? "prioritized_scope"
+    : null;
 const box = isSupport
   ? { title: t(locale, "services.support.agreed_before_title"), items: getSection(locale, "services.support.agreed_before") }
   : {

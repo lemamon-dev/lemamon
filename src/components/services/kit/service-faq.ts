@@ -115,6 +115,14 @@ export const SERVICE_FAQ: Readonly<Record<ServiceKey, readonly FaqEntry[]>> = {
     { cond: "skip_discovery" },
     { cond: "invoice" },
   ],
+  modernizacao: [
+    { own: "rewrite_or_replace" },
+    { own: "how_verified" },
+    { own: "price" },
+    { own: "how_long_modernization" },
+    { own: "data_access" },
+    { own: "wont_stall" },
+  ],
 };
 
 /** Teto das páginas de serviço (services._notes.faq_composition; auditoria SEO S03-10). O resto do site usa FAQ_MAX (9). */
@@ -142,6 +150,7 @@ export const SERVICE_FAQ_REMOVAL: Readonly<Record<ServiceKey, readonly string[]>
   integrations: ["invoice", "skip_discovery", "need_tech_knowledge"],
   mvp: ["skip_discovery", "what_is_mvp", "third_party_system", "discovery_plan_ownership", "after_mvp"],
   support: ["invoice", "skip_discovery"],
+  modernizacao: [],
 };
 
 /** Perguntas que o teto nunca tira (as objeções de dinheiro, prazo, risco, mudança, código e sigilo). */
@@ -152,6 +161,7 @@ export const SERVICE_FAQ_NEVER_REMOVED = [
   "how_long_app",
   "how_long_integration",
   "how_long_mvp",
+  "how_long_modernization",
   "wont_stall",
   "scope_change",
   "code_ownership",

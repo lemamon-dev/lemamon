@@ -16,6 +16,7 @@
  */
 import Breadcrumb from "@/components/shell/Breadcrumb.astro";
 import CtaDiagnosis from "@/components/shared/CtaDiagnosis.astro";
+import TermText from "@/components/shared/TermText.astro";
 import WhatsAppCta from "@/components/shared/WhatsAppCta.astro";
 import ArrowLink from "@/components/ui/ArrowLink.astro";
 import { getFeatures } from "@/config/features";
@@ -34,6 +35,7 @@ const { locale, service, whatsappMessage } = Astro.props;
 const origem = `${SERVICE_PARAM[service]}-hero`;
 const features = await getFeatures();
 const isMvp = service === "mvp";
+const isModernization = service === "modernizacao";
 const microcopy =
   isMvp && features.confirm.nda
     ? `${t(locale, "shared.cta.microcopy_diagnosis")} · ${t(locale, "services.mvp.hero_nda_note")}`
@@ -43,16 +45,24 @@ const crumbs = [
   { label: t(locale, "shared.breadcrumb.services"), href: urlFor("services_hub", locale) },
   { label: tDynamic(locale, `services.${service}.name`) },
 ];
+const subtitleText = tDynamic(locale, `services.${service}.subtitle`);
 ---
 
 <PageHero
   eyebrow={t(locale, "services.template.eyebrow")}
   title={tDynamic(locale, `services.${service}.h1`)}
-  subtitle={tDynamic(locale, `services.${service}.subtitle`)}
+  subtitle={isModernization ? undefined : subtitleText}
   microcopy={microcopy}
   splitTitle={isMvp}
 >
   <Breadcrumb slot="breadcrumb" locale={locale} items={crumbs} />
+  {
+    isModernization && (
+      <Fragment slot="subtitle">
+        <TermText locale={locale} text={subtitleText} terms={["accepted_module"]} />
+      </Fragment>
+    )
+  }
   <Fragment slot="actions">
     <CtaDiagnosis locale={locale} origem={origem} servico={service} />
     <WhatsAppCta locale={locale} message={whatsappMessage} source={origem} />

@@ -28,7 +28,16 @@ describe("termLabel", () => {
 
   it("todo termo de shared.terms tem rótulo nos 3 idiomas", () => {
     for (const locale of LOCALES) {
-      for (const term of ["prioritized_scope", "mvp", "api", "discovery_sprint", "support", "written_feedback"] as const) {
+      for (const term of [
+        "prioritized_scope",
+        "mvp",
+        "api",
+        "discovery_sprint",
+        "support",
+        "written_feedback",
+        "accepted_module",
+        "acceptance_criteria",
+      ] as const) {
         expect(termLabel(t(locale, `shared.terms.${term}`)).length).toBeGreaterThan(1);
       }
     }

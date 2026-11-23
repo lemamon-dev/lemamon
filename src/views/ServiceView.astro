@@ -70,7 +70,7 @@ import { SERVICE_PRICE_LINE, type PriceLineId } from "@/config/precos";
 import type { FaqInlineLink } from "@/components/shared/faq";
 import { anchorId, ANCHORS, quoteHref, SERVICE_PARAM, SERVICE_ROUTE, type ServiceKey } from "@/config/routes";
 import Base from "@/layouts/Base.astro";
-import { t, tDynamic, type Locale } from "@/i18n";
+import { getSection, hasText, t, tDynamic, type Locale } from "@/i18n";
 import { serviceMessage } from "@/lib/whatsapp-messages";
 
 interface Props {
@@ -87,8 +87,16 @@ const whatsappMessage = serviceMessage(locale, service);
 const features = await getFeatures();
 
 const serviceLine = SERVICE_PRICE_LINE[service];
-const lines: readonly PriceLineId[] = [serviceLine];
-const priceLink = hasPriceLine(features, serviceLine)
+const lines: readonly PriceLineId[] = serviceLine ? [serviceLine] : [];
+const priceFactorsService = service !== "support" ? service : null;
+const priceFactors = priceFactorsService
+  ? (getSection(locale, `services.${priceFactorsService}.price_factors` as const) as readonly unknown[])
+  : [];
+const hasPriceFactors =
+  priceFactorsService !== null &&
+  hasText(locale, `services.${priceFactorsService}.price_factors_title`) &&
+  priceFactors.length > 0;
+const priceLink = serviceLine && hasPriceLine(features, serviceLine)
   ? {
       href: `#${anchorId(ANCHORS.investment, locale)}`,
       text: isSupport ? t(locale, "services.support.price_answer_link") : t(locale, "services.template.price_answer_link"),
@@ -127,18 +135,20 @@ const faqTitle = isSupport
   <ServiceExamples locale={locale} service={service} />
   <ServiceHowItWorks locale={locale} service={service} />
   {isSupport && <ServiceHowItStarts locale={locale} />}
-  {service !== "support" && <ServicePriceFactors locale={locale} service={service} />}
+  {hasPriceFactors && service !== "support" && service !== "modernizacao" && <ServicePriceFactors locale={locale} service={service} />}
   {isSupport && <SupportFormat locale={locale} />}
-  <Investment
-    locale={locale}
-    lines={lines}
-    origem={param}
-    servico={service}
-    intro={isSupport ? t(locale, "services.support.investment_intro") : undefined}
-    note={isSupport ? t(locale, "services.support.investment_note") : t(locale, "services.template.investment_note")}
-    ctaLead={isSupport ? t(locale, "services.support.investment_cta_lead") : undefined}
-    discoveryLine={!isSupport}
-  />
+  {serviceLine && (
+    <Investment
+      locale={locale}
+      lines={lines}
+      origem={param}
+      servico={service}
+      intro={isSupport ? t(locale, "services.support.investment_intro") : undefined}
+      note={isSupport ? t(locale, "services.support.investment_note") : t(locale, "services.template.investment_note")}
+      ctaLead={isSupport ? t(locale, "services.support.investment_cta_lead") : undefined}
+      discoveryLine={!isSupport}
+    />
+  )}
   <RelatedCases locale={locale} service={service} />
   <Faq locale={locale} title={faqTitle} items={faqItems}>
     {

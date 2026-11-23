@@ -35,7 +35,7 @@ describe("HomeServices — mobile sem coluna de ícone", () => {
     const html = await container.renderToString(HomeServices as any, { props: { locale: "pt" } });
     const items = getSection("pt", "home.services.items");
     const titles = [...html.matchAll(/<h3 class="service__title"[^>]*>([\s\S]*?)<\/h3>/g)].map((match) => match[1]!);
-    expect(titles).toHaveLength(5);
+    expect(titles).toHaveLength(6);
     for (const title of titles) {
       expect(title).toMatch(/^\s*<span class="service__icon"[^>]*>\s*<svg[^>]*width="22"[^>]*aria-hidden="true"/);
     }

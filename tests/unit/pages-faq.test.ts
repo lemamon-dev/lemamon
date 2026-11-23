@@ -95,7 +95,7 @@ describe("orderedFaq — páginas de serviço", () => {
       const declared = SERVICE_FAQ[service].map((entry) => ("bank" in entry ? entry.bank : "cond" in entry ? entry.cond : entry.own));
       expect(declared, service).not.toContain("why_discovery_paid");
       expect(declared, service).not.toContain("discovery_credit");
-      expect(declared.includes("pay_before_development"), service).toBe(service !== "support");
+      expect(declared.includes("pay_before_development"), service).toBe(service !== "support" && service !== "modernizacao");
     }
   });
 

@@ -22,7 +22,7 @@ export const SITE_URL = "https://lemamon.dev";
 /** Flags de features.ts que liberam páginas inteiras (BLUEPRINT §4). */
 export type FeatureGate = "hasCases" | "hasTeam" | "hasPosts";
 
-export const SERVICE_KEYS = ["web_systems", "mobile_apps", "integrations", "mvp", "support"] as const;
+export const SERVICE_KEYS = ["web_systems", "mobile_apps", "integrations", "mvp", "support", "modernizacao"] as const;
 export type ServiceKey = (typeof SERVICE_KEYS)[number];
 
 export interface RouteDef {
@@ -102,6 +102,12 @@ export const ROUTES = {
     copy: "services.support",
     meta: "services_support",
     h1: "services.support.h1",
+  },
+  service_modernizacao: {
+    paths: { pt: "/servicos/modernizacao", en: "/en/services/modernization", es: "/es/servicios/modernizacion" },
+    copy: "services.modernizacao",
+    meta: "services_modernizacao",
+    h1: "services.modernizacao.h1",
   },
   pricing: {
     paths: { pt: "/quanto-custa", en: "/en/pricing", es: "/es/cuanto-cuesta" },
@@ -199,6 +205,7 @@ export const SERVICE_ROUTE: Record<ServiceKey, RouteKey> = {
   integrations: "service_integrations",
   mvp: "service_mvp",
   support: "service_support",
+  modernizacao: "service_modernizacao",
 };
 
 /**
@@ -211,6 +218,7 @@ export const SERVICE_PARAM: Record<ServiceKey, string> = {
   integrations: "integracoes",
   mvp: "mvp",
   support: "sustentacao",
+  modernizacao: "modernizacao",
 };
 
 /**

@@ -97,7 +97,8 @@ describe("Páginas de projeto: um destaque só por seção (painel de design)", 
       for (const service of PROJECTS) {
         const path = urlFor(SERVICE_ROUTE[service], locale);
         const html = main(built(semFicticio.outDir, path));
-        for (const id of ["como-funciona", "o-que-pesa-no-preco"]) {
+        const sections = service === "modernizacao" ? ["como-funciona"] : ["como-funciona", "o-que-pesa-no-preco"];
+        for (const id of sections) {
           const part = section(html, id);
           expect(part, `${path} #${id}`).not.toBe("");
           const arrowLinks = part.match(/<a[^>]*class="arrow-link[^"]*"[^>]*>/g) ?? [];
@@ -105,7 +106,9 @@ describe("Páginas de projeto: um destaque só por seção (painel de design)", 
           expect(arrowLinks[0], `${path} #${id}`).toContain('data-cta-id="diagnosis"');
         }
         expect(section(html, "como-funciona"), path).toContain(`href="${urlFor("how_we_work", locale)}"`);
-        expect(section(html, "o-que-pesa-no-preco"), path).toContain(`href="${urlFor("pricing", locale)}"`);
+        if (service !== "modernizacao") {
+          expect(section(html, "o-que-pesa-no-preco"), path).toContain(`href="${urlFor("pricing", locale)}"`);
+        }
       }
     }
   });

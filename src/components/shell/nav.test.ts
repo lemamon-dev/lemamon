@@ -8,7 +8,7 @@ const OFF = { hasCases: false, hasTeam: false, hasPosts: false };
 const ON = { hasCases: true, hasTeam: true, hasPosts: true };
 
 describe("navegação (BLUEPRINT §8.1, §8.5)", () => {
-  it("5 serviços na ordem do menu, nos 3 idiomas", () => {
+  it("6 serviços na ordem do menu, nos 3 idiomas", () => {
     for (const locale of LOCALES) {
       expect(serviceLinks(locale).map((link) => link.route)).toEqual([
         "service_web_systems",
@@ -16,6 +16,7 @@ describe("navegação (BLUEPRINT §8.1, §8.5)", () => {
         "service_integrations",
         "service_mvp",
         "service_support",
+        "service_modernizacao",
       ]);
     }
     expect(discoveryLink("pt").href).toBe("/sprint-de-descoberta");

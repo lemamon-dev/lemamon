@@ -43,6 +43,7 @@ const head = colon > 0 ? title.slice(0, colon + 2) : title;
 const tail = colon > 0 ? title.slice(colon + 2) : "";
 const hasActions = Astro.slots.has("actions");
 const hasVisual = Astro.slots.has("visual");
+const hasSubtitleSlot = Astro.slots.has("subtitle");
 ---
 
 <Section spacing="hero-compact" width="full" labelledby="page-hero-title" class="page-hero">
@@ -53,7 +54,13 @@ const hasVisual = Astro.slots.has("visual");
       <h1 id="page-hero-title" class="page-hero__title">
         {tail ? <Fragment>{head}<span class="page-hero__tail">{tail}</span></Fragment> : title}
       </h1>
-      {subtitle && <p class="page-hero__subtitle">{subtitle}</p>}
+      {
+        hasSubtitleSlot ? (
+          <p class="page-hero__subtitle"><slot name="subtitle" /></p>
+        ) : (
+          subtitle && <p class="page-hero__subtitle">{subtitle}</p>
+        )
+      }
       {
         hasActions && (
           <div class="page-hero__actions">

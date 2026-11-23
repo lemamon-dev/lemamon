@@ -93,7 +93,8 @@ export const SERVICE_PRICE_LINE = {
   integrations: "desenvolvimento.integracoes",
   mvp: "desenvolvimento.mvp",
   support: "sustentacao",
-} as const satisfies Record<"web_systems" | "mobile_apps" | "integrations" | "mvp" | "support", PriceLineId>;
+  modernizacao: null,
+} as const satisfies Record<"web_systems" | "mobile_apps" | "integrations" | "mvp" | "support" | "modernizacao", PriceLineId | null>;
 
 export function getPriceLine(source: Precos, id: PriceLineId): PriceLine | null {
   switch (id) {

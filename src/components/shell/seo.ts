@@ -40,6 +40,7 @@ export const OG_PAGE_HEADLINE: Partial<Record<RouteKey, TextKey>> = {
   service_integrations: "services.integrations.og_image_headline",
   service_mvp: "services.mvp.og_image_headline",
   service_support: "services.support.og_image_headline",
+  service_modernizacao: "services.modernizacao.og_image_headline",
 };
 
 export const OG_DIR = "/assets/img/og";

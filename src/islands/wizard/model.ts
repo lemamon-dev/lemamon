@@ -350,6 +350,7 @@ export const SERVICE_PREFILL: Record<ServiceKey, Partial<Answers>> = {
   integrations: { build_type: ["integration"] },
   mvp: { build_type: ["mvp"] },
   support: { stage: "maintain_live_system" },
+  modernizacao: { build_type: ["ops_system"] },
 };
 
 /** Passo em que a pré-marcação aparece (a linha de contexto vai no topo dele). */

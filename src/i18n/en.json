@@ -154,6 +154,10 @@
         "support": {
           "title": "Support and continuous improvement",
           "text": "The system is live and already needs changes. Fixes and ongoing improvements, prioritized with you."
+        },
+        "modernizacao": {
+          "title": "Legacy system modernization",
+          "text": "The system that has carried your operations for years and nobody wants to touch: rewritten one module at a time, with a fixed price for each."
         }
       },
       "footer_text": "Not sure which fits? That's what the assessment is for."
@@ -802,7 +806,7 @@
     "hub": {
       "hero": {
         "title": "Software development services for businesses",
-        "subtitle": "Web apps, mobile apps, integrations, MVPs and ongoing support, with scope, timeline and price agreed before we start."
+        "subtitle": "Web apps, mobile apps, integrations, MVPs, ongoing support and legacy system modernization, with scope, timeline and price agreed before we start."
       },
       "list": {
         "for_when_label": "Right for you when…",
@@ -850,6 +854,15 @@
               "Bug fixes and updates",
               "Ongoing enhancements",
               "New features"
+            ]
+          },
+          "modernizacao": {
+            "name": "Legacy system modernization",
+            "for_when": "the system that runs your operations is old and nobody wants to touch it.",
+            "examples": [
+              "Legacy ERP, module by module",
+              "Customer and reseller portals",
+              "Orders and invoicing"
             ]
           }
         }
@@ -1420,6 +1433,92 @@
       "cta_final": {
         "title": "Tell us what needs to change in your system",
         "text": "In 45 minutes, we find out what's holding things up, and you get written feedback afterward."
+      }
+    },
+    "modernizacao": {
+      "name": "Legacy system modernization",
+      "name_in_sentence": "legacy system modernization",
+      "page_name_in_sentence": "legacy system modernization",
+      "h1": "Legacy system modernization: module-by-module rewrites at a fixed price per module",
+      "subtitle": "We rewrite the system that's already live one module at a time, with scope, timeline and price fixed before each one starts, and billing only for the accepted module.",
+      "signals": [
+        "The system has carried the business for years, and everyone is afraid to touch it.",
+        "The people who built it have left, and the documentation doesn't say what it does today.",
+        "A small change takes weeks or breaks something in another part of the system.",
+        "The technology has aged: it gets harder every year to find people who know it and to keep everything up to date.",
+        "Rewriting everything at once feels too costly and risky, and operations can't stop."
+      ],
+      "examples": [
+        {
+          "title": "Legacy ERP (business management system)",
+          "text": "Finance, purchasing and inventory rewritten one module at a time, while the rest keeps running on the current system."
+        },
+        {
+          "title": "Orders, inventory and invoicing",
+          "text": "The module that weighs most on operations is modernized first, and it only counts once it's been checked against how the current system behaves."
+        },
+        {
+          "title": "Customer and reseller portal",
+          "text": "The customer area moves to a current foundation, with orders, invoice copies and status working as they did before."
+        },
+        {
+          "title": "Internal records and routines",
+          "text": "Screens and routines that only one person understands get documented as they're rewritten, module by module."
+        },
+        {
+          "title": "Integrations tied to the old system",
+          "text": "Connections to the ERP, payments or online store are rebuilt along with the module, so they stop depending on the old code."
+        }
+      ],
+      "method_steps": {
+        "diagnosis": "Free assessment: with read access from your IT team, we read the code and map the modules, the dependencies between them and the points where the system connects to the outside world. You get a suggested order and which module makes sense to start with.",
+        "discovery": "For each module, before we start, we agree in writing on what it must do exactly like the current system (the acceptance criteria), which inputs and outputs will be checked and the steps for checking them. Scope, timeline and price are fixed together with that agreement.",
+        "development": "We rewrite one module at a time. In parallel, the new module receives a copy of the same inputs the current system is handling, and we compare step by step what each one returns. The current system stays live until the checks meet the agreed criteria; only then does the new module take its place. AI speeds up the rewrite, and the checking is done with you.",
+        "support": "Once a module is live, we can keep looking after the delivered modules and keep evolving the system as your operations require."
+      },
+      "discovery_defines": [
+        "Which modules exist and in what order they'll be modernized",
+        "The acceptance criteria for each module: what it must do exactly like the current system",
+        "What may change and what must stay exactly as it is",
+        "How each new module goes live and the old one is retired",
+        "Who has access to the code and the data, and how the data is handled"
+      ],
+      "price_factors_title": "What affects the price of a modernization",
+      "price_factors": [],
+      "faq": {
+        "rewrite_or_replace": {
+          "question": "Rewrite the system or replace it with off-the-shelf software?",
+          "answer": "If off-the-shelf software fits your process, replacing the system usually costs less. Rewriting makes sense when the system carries rules only your company has, and ready-made software doesn't cover them. The free assessment helps you decide, by looking at your system."
+        },
+        "how_verified": {
+          "question": "How do I know the new module does the same as the old one?",
+          "answer": "Before each module starts, we agree in writing on the acceptance criteria: what it must do exactly like the current system. The new module is checked against scenarios agreed with you, and the current system stays live until acceptance. The checking is done with you, and billing is only for the accepted module."
+        },
+        "price": {
+          "question": "How much does legacy system modernization cost?",
+          "answer": "It depends on the size of the system, how many modules are involved, how much one depends on another and what the current system lets us check. The price is fixed per module, before it starts. If you already have a budget in mind, tell us in the assessment."
+        },
+        "how_long_modernization": {
+          "question": "How long does it take to modernize a system?",
+          "answer": "It depends on the size of the system and the order of the modules. The timeline for each module is fixed before it starts, along with the price. If a date matters, such as the end of support for a technology or a contract, bring it up in the assessment. The date goes into the plan."
+        },
+        "data_access": {
+          "question": "Who has access to my system's code and data?",
+          "answer": "What access we need, where the work runs and who sees the data are all defined in writing with you before scope, timeline and price are fixed.",
+          "question_with_nda": "Do you sign NDAs? And who has access to my system's code and data?",
+          "answer_with_nda": "Yes. If the project calls for confidentiality, we sign a non-disclosure agreement (NDA) before you share the details. Just ask on WhatsApp or by email at {email}. What access we need, where the work runs and who sees the data are all defined in writing with you before scope, timeline and price are fixed.",
+          "answer_with_nda_no_whatsapp": "Yes. If the project calls for confidentiality, we sign a non-disclosure agreement (NDA) before you share the details. Just ask by email at {email}. What access we need, where the work runs and who sees the data are all defined in writing with you before scope, timeline and price are fixed."
+        },
+        "wont_stall": {
+          "question": "How do I know the project won't stall halfway through?",
+          "answer": "Modernization projects usually stall when everything is rewritten at once and nothing works until the end. Here the work goes module by module: each one has scope, timeline and price fixed before it starts, the current system stays live until acceptance, and billing is only for the accepted module. If something goes off track, you notice early, not just at the end."
+        }
+      },
+      "other_services_line": "Rewriting, one module at a time, the live system your operations depend on.",
+      "og_image_headline": "Legacy systems, modernized module by module",
+      "cta_final": {
+        "title": "Tell us which system needs modernizing",
+        "text": "In 45 minutes, we get to know the system with you, and you get written feedback afterward."
       }
     }
   },
@@ -2119,6 +2218,10 @@
     "not_found": {
       "title": "Page not found | Lemamon.dev",
       "description": "This page doesn't exist or has moved. Find your way to our services, our method or the free assessment."
+    },
+    "services_modernizacao": {
+      "title": "Legacy system modernization, module by module | Lemamon.dev",
+      "description": "Legacy system modernization: we rewrite your live system one module at a time, with a fixed price per module and billing only for accepted modules."
     }
   },
   "shared": {
@@ -2157,6 +2260,7 @@
         "integrations": "Integrations and automation",
         "mvp": "MVPs and digital products",
         "support": "Support and continuous improvement",
+        "modernizacao": "Legacy system modernization",
         "discovery_label": "Before we build: Discovery Sprint",
         "all_services": "All services"
       },
@@ -2394,7 +2498,9 @@
       "support": "Support: looking after the system once it's live, with bug fixes, updates and new features.",
       "written_feedback": "Written feedback: what you receive after the 45-minute conversation. Because it's in writing, you can read it at your own pace and share it with anyone else involved in the decision.",
       "written_feedback_with_content": "Written feedback: what you receive after the 45-minute conversation, with {conteudo_da_devolutiva}. You can pass it on to whoever is deciding with you.",
-      "tip_hint": "See what this term means"
+      "tip_hint": "See what this term means",
+      "accepted_module": "Accepted module: a module that passed the checks agreed before it started and was accepted within the period set in the contract. Billing happens only on that acceptance.",
+      "acceptance_criteria": "Acceptance criteria: the list, agreed before a module starts, of what it must do exactly like the current system to be accepted."
     },
     "lgpd": {
       "form_notice": "We use this information to respond to you, and we record how you got to our site, for example through an ad. The details are in our {politica}.",
@@ -2459,7 +2565,8 @@
         "mobile_apps": "Mobile apps",
         "integrations": "Integrations",
         "mvp": "MVP",
-        "support": "Support"
+        "support": "Support",
+        "modernizacao": "Modernization"
       },
       "cta_final": {
         "title": "Want something similar?",

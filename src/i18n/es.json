@@ -154,6 +154,10 @@
         "support": {
           "title": "Mantenimiento y evolución",
           "text": "El sistema ya está en uso y pide ajustes: correcciones y mejoras continuas, con prioridades acordadas contigo."
+        },
+        "modernizacao": {
+          "title": "Modernización de sistemas heredados",
+          "text": "El sistema que sostiene la operación desde hace años y que nadie quiere tocar: reescrito de a un módulo, con precio cerrado en cada uno."
         }
       },
       "footer_text": "¿No sabes cuál necesitas? Para eso está el diagnóstico."
@@ -802,7 +806,7 @@
     "hub": {
       "hero": {
         "title": "Servicios de desarrollo de software para empresas",
-        "subtitle": "Sistemas web, apps, integraciones, MVP y mantenimiento, con alcance, plazo y precio acordados antes de empezar."
+        "subtitle": "Sistemas web, apps, integraciones, MVP, mantenimiento y modernización de sistemas heredados, con alcance, plazo y precio acordados antes de empezar."
       },
       "list": {
         "for_when_label": "Conviene cuando…",
@@ -850,6 +854,15 @@
               "Correcciones y actualizaciones",
               "Mejoras continuas",
               "Nuevas funcionalidades"
+            ]
+          },
+          "modernizacao": {
+            "name": "Modernización de sistemas heredados",
+            "for_when": "el sistema que sostiene la operación es antiguo y nadie quiere tocarlo.",
+            "examples": [
+              "ERP antiguo, módulo a módulo",
+              "Portal de clientes y revendedores",
+              "Pedidos y facturación"
             ]
           }
         }
@@ -1420,6 +1433,92 @@
       "cta_final": {
         "title": "Cuéntanos qué tiene que cambiar en el sistema",
         "text": "En 45 minutos entendemos qué se está trabando y recibes nuestras conclusiones por escrito."
+      }
+    },
+    "modernizacao": {
+      "name": "Modernización de sistemas heredados",
+      "name_in_sentence": "modernización de sistema heredado",
+      "page_name_in_sentence": "modernización de sistemas heredados",
+      "h1": "Modernización de sistemas heredados: reescritura por módulos con precio cerrado por módulo",
+      "subtitle": "Reescribimos el sistema que ya está en uso, un módulo a la vez, con alcance, plazo y precio cerrados antes de empezar cada uno y cobro solo del módulo aceptado.",
+      "signals": [
+        "El sistema sostiene la operación de la empresa desde hace años, y todos temen tocarlo.",
+        "Quien lo construyó ya se fue, y la documentación no dice lo que el sistema hace hoy.",
+        "Un cambio pequeño tarda semanas o rompe algo en otra parte del sistema.",
+        "La tecnología envejeció: cada vez es más difícil encontrar a quien la conozca y mantener todo al día.",
+        "Reescribirlo todo de una vez parece demasiado caro y arriesgado, y la operación no puede parar."
+      ],
+      "examples": [
+        {
+          "title": "ERP (sistema de gestión) antiguo",
+          "text": "Finanzas, compras e inventario reescritos de a un módulo, mientras el resto sigue funcionando en el sistema actual."
+        },
+        {
+          "title": "Pedidos, inventario y facturación",
+          "text": "El módulo que más pesa en la operación se moderniza primero y solo cuenta cuando se comprobó que se comporta como el sistema actual."
+        },
+        {
+          "title": "Portal de clientes y revendedores",
+          "text": "El área del cliente pasa a una base actual, con pedidos, copia de factura y estado funcionando como antes."
+        },
+        {
+          "title": "Registros y rutinas internas",
+          "text": "Las pantallas y rutinas que solo una persona entiende quedan documentadas al reescribirse, módulo por módulo."
+        },
+        {
+          "title": "Integraciones atadas al sistema antiguo",
+          "text": "Las conexiones con el ERP, los pagos o la tienda en línea se rehacen junto con el módulo, para que dejen de depender del código antiguo."
+        }
+      ],
+      "method_steps": {
+        "diagnosis": "Diagnóstico gratuito: con el acceso de lectura de tu equipo de TI, leemos el código y mapeamos los módulos, las dependencias entre ellos y los puntos de integración con el mundo exterior. Sale con el orden sugerido y con el módulo por el que conviene empezar.",
+        "discovery": "Para cada módulo, acordamos por escrito, antes de empezar, qué debe hacer igual que el sistema actual (el criterio de aceptación), qué entradas y salidas se comprobarán y los pasos de comprobación. Alcance, plazo y precio quedan cerrados junto con ese acuerdo.",
+        "development": "Reescribimos un módulo a la vez. En paralelo, el módulo nuevo recibe una copia de las mismas entradas que está tratando el sistema actual, y comparamos paso a paso lo que devuelve cada uno. El sistema actual sigue en uso hasta que la comprobación cumpla el criterio acordado; solo entonces el módulo nuevo ocupa su lugar. La IA acelera la reescritura, y la comprobación se hace contigo.",
+        "support": "Cuando un módulo ya está en uso, podemos seguir cuidando los módulos entregados y haciendo evolucionar el sistema según lo pida la operación."
+      },
+      "discovery_defines": [
+        "Qué módulos existen y en qué orden se modernizarán",
+        "El criterio de aceptación de cada módulo: qué debe hacer igual que el sistema actual",
+        "Qué puede cambiar y qué debe seguir exactamente igual",
+        "Cómo entra en uso cada módulo nuevo y sale el antiguo",
+        "Quién accede al código y a los datos, y cómo se tratan los datos"
+      ],
+      "price_factors_title": "Qué pesa en el precio de una modernización",
+      "price_factors": [],
+      "faq": {
+        "rewrite_or_replace": {
+          "question": "¿Reescribir el sistema o cambiarlo por un software ya hecho?",
+          "answer": "Si un software ya hecho cubre tu proceso, cambiarlo suele salir más barato. Reescribir tiene sentido cuando el sistema guarda reglas que solo tiene tu empresa y que el software listo no cubre. El diagnóstico gratuito ayuda a decidir, mirando tu sistema."
+        },
+        "how_verified": {
+          "question": "¿Cómo sé que el módulo nuevo hace lo mismo que el antiguo?",
+          "answer": "Antes de empezar cada módulo, acordamos por escrito el criterio de aceptación: qué debe hacer igual que el sistema actual. El módulo nuevo se comprueba con escenarios acordados contigo, y el sistema actual sigue en uso hasta la aceptación. La comprobación se hace contigo, y el cobro es solo del módulo aceptado."
+        },
+        "price": {
+          "question": "¿Cuánto cuesta modernizar un sistema heredado?",
+          "answer": "Depende del tamaño del sistema, de cuántos módulos entren, de cuánto dependa un módulo de otro y de lo que permita comprobar el sistema actual. El precio queda cerrado por módulo, antes de que empiece. Si ya tienes un monto en mente, cuéntanoslo en el diagnóstico."
+        },
+        "how_long_modernization": {
+          "question": "¿Cuánto tiempo lleva modernizar un sistema?",
+          "answer": "Depende del tamaño del sistema y del orden de los módulos. El plazo de cada módulo se cierra antes de que empiece, junto con el precio. Si hay una fecha que pesa, como el fin del soporte de una tecnología o de un contrato, menciónala en el diagnóstico: entra en el plan."
+        },
+        "data_access": {
+          "question": "¿Quién accede al código y a los datos de mi sistema?",
+          "answer": "Qué accesos necesitamos, dónde se hace el trabajo y quién ve los datos se define por escrito contigo antes de cerrar alcance, plazo y precio.",
+          "question_with_nda": "¿Firman un NDA? ¿Y quién accede al código y a los datos de mi sistema?",
+          "answer_with_nda": "Sí. Si el proyecto requiere confidencialidad, firmamos el acuerdo de confidencialidad (NDA) antes de que nos cuentes los detalles. Solo tienes que pedirlo por WhatsApp o por correo electrónico a {email}. Qué accesos necesitamos, dónde se hace el trabajo y quién ve los datos se define por escrito contigo antes de cerrar alcance, plazo y precio.",
+          "answer_with_nda_no_whatsapp": "Sí. Si el proyecto requiere confidencialidad, firmamos el acuerdo de confidencialidad (NDA) antes de que nos cuentes los detalles. Solo tienes que pedirlo por correo electrónico a {email}. Qué accesos necesitamos, dónde se hace el trabajo y quién ve los datos se define por escrito contigo antes de cerrar alcance, plazo y precio."
+        },
+        "wont_stall": {
+          "question": "¿Cómo sé que el proyecto no se va a quedar a medias?",
+          "answer": "Un proyecto de modernización suele quedarse a medias cuando todo se reescribe de una vez y nada funciona hasta el final. Aquí el trabajo va módulo por módulo: cada uno tiene alcance, plazo y precio cerrados antes de empezar, el sistema actual sigue en uso hasta la aceptación y el cobro es solo del módulo aceptado. Si algo se desvía, lo notas temprano, y no solo al final."
+        }
+      },
+      "other_services_line": "Reescribir, de a un módulo, el sistema que ya está en uso y sostiene la operación.",
+      "og_image_headline": "Sistemas heredados, módulo a módulo",
+      "cta_final": {
+        "title": "Cuéntanos qué sistema necesita modernizarse",
+        "text": "En 45 minutos entendemos el sistema contigo y recibes nuestras conclusiones por escrito."
       }
     }
   },
@@ -2119,6 +2218,10 @@
     "not_found": {
       "title": "Página no encontrada | Lemamon.dev",
       "description": "Esta página no existe o cambió de dirección. Aquí tienes enlaces a los servicios, el método y el diagnóstico gratuito de Lemamon.dev."
+    },
+    "services_modernizacao": {
+      "title": "Modernización de sistemas heredados, módulo a módulo | Lemamon.dev",
+      "description": "Modernización de sistemas heredados: reescribimos el sistema en uso, módulo a módulo, con precio cerrado por módulo y cobro solo del módulo aceptado."
     }
   },
   "shared": {
@@ -2157,6 +2260,7 @@
         "integrations": "Integraciones y automatización",
         "mvp": "MVP y productos digitales",
         "support": "Mantenimiento y evolución",
+        "modernizacao": "Modernización de sistemas heredados",
         "discovery_label": "Antes de construir: Sprint de Descubrimiento",
         "all_services": "Todos los servicios"
       },
@@ -2394,7 +2498,9 @@
       "support": "Mantenimiento y evolución: el cuidado del sistema cuando ya está en funcionamiento, con correcciones, actualizaciones y nuevas funcionalidades.",
       "written_feedback": "Conclusiones por escrito: lo que te enviamos después de los 45 minutos de conversación. Al ser escritas, puedes leerlas con calma y compartirlas con quien decide contigo.",
       "written_feedback_with_content": "Conclusiones por escrito: lo que te enviamos después de los 45 minutos de conversación, con {conteudo_da_devolutiva}. Puedes compartirlas con quien decide contigo.",
-      "tip_hint": "Ver qué significa este término"
+      "tip_hint": "Ver qué significa este término",
+      "accepted_module": "Módulo aceptado: el módulo que pasó las comprobaciones acordadas antes de empezar y fue aceptado dentro del plazo definido en el contrato. El cobro se hace solo con esa aceptación.",
+      "acceptance_criteria": "Criterio de aceptación: la lista, acordada antes de que el módulo empiece, de lo que debe hacer igual que el sistema actual para ser aceptado."
     },
     "lgpd": {
       "form_notice": "Usamos estos datos para responder a tu contacto y registramos cómo llegaste al sitio, por ejemplo, a través de un anuncio. Los detalles están en nuestra {politica}.",
@@ -2459,7 +2565,8 @@
         "mobile_apps": "Aplicaciones móviles",
         "integrations": "Integraciones",
         "mvp": "MVP",
-        "support": "Mantenimiento"
+        "support": "Mantenimiento",
+        "modernizacao": "Modernización"
       },
       "cta_final": {
         "title": "¿Quieres algo parecido?",

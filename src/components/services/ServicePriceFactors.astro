@@ -31,7 +31,7 @@ import TextCta from "./kit/TextCta.astro";
 
 interface Props {
   locale: Locale;
-  service: Exclude<ServiceKey, "support">;
+  service: Exclude<ServiceKey, "support" | "modernizacao">;
 }
 
 const { locale, service } = Astro.props;

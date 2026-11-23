@@ -4,7 +4,15 @@
  */
 
 /** Chaves de shared.terms (exceto a variante written_feedback_with_content). */
-export type TermId = "prioritized_scope" | "mvp" | "api" | "discovery_sprint" | "support" | "written_feedback";
+export type TermId =
+  | "prioritized_scope"
+  | "mvp"
+  | "api"
+  | "discovery_sprint"
+  | "support"
+  | "written_feedback"
+  | "accepted_module"
+  | "acceptance_criteria";
 
 /**
  * Rótulo do termo a partir da própria explicação do i18n, que sempre começa

@@ -49,6 +49,7 @@ const PAGES = {
   service_integrations: "services.integrations.og_image_headline",
   service_mvp: "services.mvp.og_image_headline",
   service_support: "services.support.og_image_headline",
+  service_modernizacao: "services.modernizacao.og_image_headline",
 };
 /* Step highlighted on the rail (0 = diagnosis, "start here"). */
 const HIGHLIGHT = { discovery_sprint: 1, service_support: 3 };

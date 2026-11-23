@@ -154,6 +154,10 @@
         "support": {
           "title": "Sustentação e evolução",
           "text": "O sistema entrou no ar e já pede ajustes: correções e melhorias contínuas, na prioridade combinada com você."
+        },
+        "modernizacao": {
+          "title": "Modernização de sistemas legados",
+          "text": "O sistema que sustenta a operação há anos e que ninguém quer mexer: reescrito um módulo por vez, com preço fechado em cada um."
         }
       },
       "footer_text": "Não sabe em qual se encaixa? O diagnóstico serve para isso."
@@ -802,7 +806,7 @@
     "hub": {
       "hero": {
         "title": "Serviços de desenvolvimento de software para empresas",
-        "subtitle": "Sistemas web, aplicativos, integrações, MVPs e sustentação, com escopo, prazo e preço combinados antes de começar."
+        "subtitle": "Sistemas web, aplicativos, integrações, MVPs, sustentação e modernização de sistemas legados, com escopo, prazo e preço combinados antes de começar."
       },
       "list": {
         "for_when_label": "Para quando…",
@@ -850,6 +854,15 @@
               "Correções e atualizações",
               "Melhorias contínuas",
               "Novas funcionalidades"
+            ]
+          },
+          "modernizacao": {
+            "name": "Modernização de sistemas legados",
+            "for_when": "o sistema que sustenta a operação é antigo e ninguém quer mexer nele.",
+            "examples": [
+              "ERP antigo, módulo a módulo",
+              "Portal de clientes e revendedores",
+              "Pedidos e faturamento"
             ]
           }
         }
@@ -1420,6 +1433,92 @@
       "cta_final": {
         "title": "Conte o que precisa mudar no sistema",
         "text": "Em 45 minutos, a gente entende o que está travando, e a devolutiva vem por escrito."
+      }
+    },
+    "modernizacao": {
+      "name": "Modernização de sistemas legados",
+      "name_in_sentence": "modernização de sistema legado",
+      "page_name_in_sentence": "modernização de sistemas legados",
+      "h1": "Modernização de sistemas legados: reescrita módulo a módulo com preço fechado por módulo",
+      "subtitle": "Reescrevemos o sistema que já está no ar, um módulo por vez, com escopo, prazo e preço fechados antes de começar cada um e cobrança só no módulo aceito.",
+      "signals": [
+        "O sistema sustenta a operação da empresa há anos, e todo mundo tem medo de mexer nele.",
+        "Quem construiu o sistema já saiu, e a documentação não conta o que ele faz hoje.",
+        "Uma mudança pequena leva semanas ou quebra algo em outra parte do sistema.",
+        "A tecnologia envelheceu: está cada vez mais difícil achar quem a conheça e manter tudo atualizado.",
+        "Reescrever tudo de uma vez parece caro e arriscado demais, e a operação não pode parar."
+      ],
+      "examples": [
+        {
+          "title": "Sistema de gestão (ERP) antigo",
+          "text": "Financeiro, compras e estoque reescritos um módulo por vez, enquanto o restante segue funcionando no sistema atual."
+        },
+        {
+          "title": "Pedidos, estoque e faturamento",
+          "text": "O módulo que mais pesa na operação é modernizado primeiro e só vale depois de conferido com o comportamento do sistema atual."
+        },
+        {
+          "title": "Portal de clientes e revendedores",
+          "text": "A área do cliente passa para uma base atual, com pedidos, segunda via e status funcionando como antes."
+        },
+        {
+          "title": "Cadastros e rotinas internas",
+          "text": "Telas e rotinas que só uma pessoa entende ficam documentadas conforme são reescritas, módulo a módulo."
+        },
+        {
+          "title": "Integrações presas ao sistema antigo",
+          "text": "As conexões com ERP, pagamento ou loja virtual são refeitas junto com o módulo, para deixarem de depender do código antigo."
+        }
+      ],
+      "method_steps": {
+        "diagnosis": "Diagnóstico gratuito: com o acesso de leitura da sua equipe de TI, a gente lê o código, mapeia os módulos, as dependências entre eles e os pontos de integração com o mundo de fora. Sai com a ordem sugerida e por qual módulo faz sentido começar.",
+        "discovery": "Para cada módulo, a gente combina por escrito, antes de começar, o que ele precisa fazer igual ao sistema atual (o critério de aceite), que entradas e saídas vão ser conferidas e os passos de conferência. Escopo, prazo e preço saem fechados junto desse combinado.",
+        "development": "Reescrevemos um módulo por vez. Em paralelo, o módulo novo recebe uma cópia das mesmas entradas que o sistema atual está tratando, e a gente compara passo a passo o que cada um devolve. O sistema atual segue no ar até a conferência bater o critério combinado; só então o módulo novo assume o lugar dele. A IA acelera a reescrita, e a conferência é feita com você.",
+        "support": "Depois que o módulo entrou no ar, a gente pode seguir cuidando dos módulos entregues e evoluindo o sistema conforme a operação pede."
+      },
+      "discovery_defines": [
+        "Quais módulos existem e em que ordem serão modernizados",
+        "O critério de aceite de cada módulo: o que ele precisa fazer igual ao sistema atual",
+        "O que pode mudar e o que precisa continuar exatamente como está",
+        "Como cada módulo novo entra no ar e o antigo sai de cena",
+        "Quem acessa o código e os dados, e como os dados são tratados"
+      ],
+      "price_factors_title": "O que pesa no preço de uma modernização",
+      "price_factors": [],
+      "faq": {
+        "rewrite_or_replace": {
+          "question": "Reescrever o sistema ou trocar por um software pronto?",
+          "answer": "Se um software pronto atende o seu processo, trocar costuma sair mais barato. Reescrever faz sentido quando o sistema guarda regras que só a sua empresa tem e que o pronto não cobre. O diagnóstico gratuito ajuda a decidir, olhando o seu sistema."
+        },
+        "how_verified": {
+          "question": "Como sei que o módulo novo faz o mesmo que o antigo?",
+          "answer": "Antes de começar cada módulo, a gente combina por escrito o critério de aceite: o que ele precisa fazer igual ao sistema atual. O módulo novo é conferido com cenários combinados com você, e o sistema atual segue no ar até o aceite. A conferência é feita com você, e a cobrança é só no módulo aceito."
+        },
+        "price": {
+          "question": "Quanto custa modernizar um sistema legado?",
+          "answer": "Depende do tamanho do sistema, de quantos módulos entram, de quanto um módulo depende do outro e do que o sistema atual permite conferir. O preço sai fechado por módulo, antes de ele começar. Se você já tem um valor em mente, conte no diagnóstico."
+        },
+        "how_long_modernization": {
+          "question": "Quanto tempo leva para modernizar um sistema?",
+          "answer": "Depende do tamanho do sistema e da ordem dos módulos. O prazo de cada módulo sai fechado antes de ele começar, junto com o preço. Se há uma data que pesa, como o fim do suporte de uma tecnologia ou de um contrato, conte no diagnóstico: ela entra no plano."
+        },
+        "data_access": {
+          "question": "Quem acessa o código e os dados do meu sistema?",
+          "answer": "Quais acessos a gente precisa, onde o trabalho roda e quem vê os dados ficam definidos por escrito com você antes de fechar escopo, prazo e preço.",
+          "question_with_nda": "Vocês assinam NDA? E quem acessa o código e os dados do meu sistema?",
+          "answer_with_nda": "Sim. Se o projeto pede sigilo, a gente assina o acordo de confidencialidade (NDA) antes de você contar os detalhes. É só pedir pelo WhatsApp ou pelo e-mail {email}. Quais acessos a gente precisa, onde o trabalho roda e quem vê os dados ficam definidos por escrito com você antes de fechar escopo, prazo e preço.",
+          "answer_with_nda_no_whatsapp": "Sim. Se o projeto pede sigilo, a gente assina o acordo de confidencialidade (NDA) antes de você contar os detalhes. É só pedir pelo e-mail {email}. Quais acessos a gente precisa, onde o trabalho roda e quem vê os dados ficam definidos por escrito com você antes de fechar escopo, prazo e preço."
+        },
+        "wont_stall": {
+          "question": "Como eu sei que o projeto não vai parar no meio?",
+          "answer": "Projeto de modernização costuma parar quando tudo é reescrito de uma vez e nada funciona até o fim. Aqui o trabalho vai módulo a módulo: cada um tem escopo, prazo e preço fechados antes de começar, o sistema atual segue no ar até o aceite e a cobrança é só no módulo aceito. Se algo sair do rumo, você percebe cedo, e não só no fim."
+        }
+      },
+      "other_services_line": "Reescrever, um módulo por vez, o sistema que já está no ar e sustenta a operação.",
+      "og_image_headline": "Legado modernizado, módulo a módulo",
+      "cta_final": {
+        "title": "Conte qual sistema precisa ser modernizado",
+        "text": "Em 45 minutos, a gente entende o sistema com você, e a devolutiva vem por escrito."
       }
     }
   },
@@ -2119,6 +2218,10 @@
     "not_found": {
       "title": "Página não encontrada | Lemamon.dev",
       "description": "Esta página não existe ou mudou de endereço. Veja os caminhos para os serviços, o método e o diagnóstico gratuito da Lemamon.dev."
+    },
+    "services_modernizacao": {
+      "title": "Modernização de sistemas legados, módulo a módulo | Lemamon.dev",
+      "description": "Modernização de sistemas legados: reescrevemos o sistema que já está no ar, um módulo por vez, com preço fechado por módulo e cobrança só no módulo aceito."
     }
   },
   "shared": {
@@ -2157,6 +2260,7 @@
         "integrations": "Integrações e automação",
         "mvp": "MVP e produtos digitais",
         "support": "Sustentação e evolução",
+        "modernizacao": "Modernização de sistemas legados",
         "discovery_label": "Antes de construir: Sprint de Descoberta",
         "all_services": "Todos os serviços"
       },
@@ -2394,7 +2498,9 @@
       "support": "Sustentação: o cuidado com o sistema depois que ele entra no ar, com correções, atualizações e novas funcionalidades.",
       "written_feedback": "Devolutiva por escrito: o retorno que você recebe depois dos 45 minutos de conversa. Por ser escrita, dá para ler com calma e repassar a quem decide com você.",
       "written_feedback_with_content": "Devolutiva por escrito: o retorno depois dos 45 minutos de conversa, com {conteudo_da_devolutiva}. Dá para repassar a quem decide com você.",
-      "tip_hint": "Ver explicação do termo"
+      "tip_hint": "Ver explicação do termo",
+      "accepted_module": "Módulo aceito: o módulo que passou nas conferências combinadas antes de ele começar e foi aceito dentro do prazo definido em contrato. A cobrança é só nesse aceite.",
+      "acceptance_criteria": "Critério de aceite: a lista, combinada antes de o módulo começar, do que ele precisa fazer igual ao sistema atual para ser aceito."
     },
     "lgpd": {
       "form_notice": "Usamos estes dados para responder ao seu contato e registramos como você chegou ao site, por exemplo por um anúncio. Os detalhes estão na {politica}.",
@@ -2459,7 +2565,8 @@
         "mobile_apps": "Aplicativos",
         "integrations": "Integrações",
         "mvp": "MVP",
-        "support": "Sustentação"
+        "support": "Sustentação",
+        "modernizacao": "Modernização"
       },
       "cta_final": {
         "title": "Quer algo parecido?",

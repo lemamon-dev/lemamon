@@ -55,7 +55,7 @@ export const SAME = [
   ["home.hero.title", "shared.footer.tagline"],
   ["home.hero.eyebrow", "quote.entry.eyebrow", "meta.default_og_image_text.audience_line"],
   ["home.method.title", "how_we_work.why_this_order.highlight"],
-  ["faq.items.wont_stall.question", "services.mvp.faq.wont_stall.question"],
+  ["faq.items.wont_stall.question", "services.mvp.faq.wont_stall.question", "services.modernizacao.faq.wont_stall.question"],
   ["home.team.title", "about.team.title"],
 ];
 
